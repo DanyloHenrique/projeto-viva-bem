@@ -1,0 +1,82 @@
+@use "../../styles/variables" as *;
+
+#header {
+  background: linear-gradient(90deg, #4247a2 0%, #52b095 100%);
+
+  width: 90%;
+  height: 2.5rem;
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1.5rem;
+
+  margin-top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-radius: 1rem;
+
+  img {
+    height: 21px;
+  }
+
+  nav span img {
+    filter: brightness(0) invert(1);
+    height: 28px;
+  }
+}
+
+@media screen {
+  @media (min-width: 760px) {
+    #header {
+      width: 80%;
+      padding-inline: 1rem;
+
+      img {
+        height: 32px;
+        width: 191px;
+      }
+
+      nav {
+        display: flex;
+        gap: 1rem;
+        margin: 0 auto;
+
+        a {
+          position: relative;
+          font-size: 18px;
+          transition: opacity 0.3s ease;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            height: 2px;
+            width: 100%;
+            transform: scaleX(0);
+            transform-origin: left center;
+            background: #fff;
+            transition: transform 0.25s ease;
+            pointer-events: none;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1100px) {
+    #header {
+      padding-inline: 2rem;
+      nav {
+        gap: 3rem;
+      }
+    }
+  }
+}

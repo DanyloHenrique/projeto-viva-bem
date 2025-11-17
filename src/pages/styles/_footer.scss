@@ -1,0 +1,72 @@
+@use "../../styles/variables" as *;
+
+footer {
+  width: inherit;
+  background-color: $background-color-footer;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  .directs {
+    text-align: center;
+    padding: 2rem 0;
+  }
+}
+
+footer .container {
+  padding: 4rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 1px solid white;
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin-bottom: 32px;
+
+    h4 {
+      font-weight: bold;
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+
+    img {
+      height: 34px;
+    }
+    .contatos {
+      margin-bottom: 2rem;
+    }
+  }
+
+  p {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  footer .container {
+    flex-direction: row;
+    align-items: flex-start;
+
+    .group {
+      justify-content: flex-start;
+
+      img {
+        margin-bottom: 16px;
+      }
+
+      h4 {
+        margin-top: 0;
+      }
+    }
+  }
+}
