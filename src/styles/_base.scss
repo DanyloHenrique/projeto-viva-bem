@@ -1,0 +1,44 @@
+@use "variables" as *;
+
+* {
+  box-sizing: border-box;
+  max-width: 100svw;
+  font-family: "Inter";
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+page-container {
+  background-color: #f8f9fa;
+}
+
+h1 {
+  font: normal bold 45px/1.1 "Inter";
+  color: transparent;
+  background: $color-gradient;
+  background-clip: text;
+}
+
+h2 {
+  font: normal bold 32px/1.1 "Inter";
+  color: transparent;
+  background: $color-gradient;
+  background-clip: text;
+}
+
+h3 {
+  font: normal bold 1.5rem/1 "Montserrat";
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+a {
+  color: white;
+}

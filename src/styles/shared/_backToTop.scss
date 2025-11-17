@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+
+#backToTop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 100; 
+
+  background: $color-gradient;
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  img {
+    filter: brightness(0) invert(1);
+    width: fit-content;
+  }
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: all;
+}
